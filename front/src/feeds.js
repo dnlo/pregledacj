@@ -1,0 +1,22 @@
+let root = "https://storage.googleapis.com/pregledacj-feeds/"
+export default {
+"Blic":     `${root}Blic.json`,
+"Novosti":  `${root}Novosti.json`,
+"RTS":      `${root}RTS.json`,
+"N1":       `${root}N1.json`,
+"Politika": `${root}Politika.json`,
+"Danas":    `${root}Danas.json`,
+"Kurir": `${root}Kurir.json`,
+"Informer": `${root}Informer.json`,
+"Alo": `${root}Alo.json`,
+"Telegraf": `${root}Telegraf.json`,
+"Beta": `${root}Beta.json`,
+"Tanjug": `${root}Tanjug.json`,
+"Espreso": `${root}Espreso.json`,
+"Press": `${root}Press.json`,
+"NIN": `${root}NIN.json`,
+"Aljazeera": `${root}Aljazeera.json`,
+"Vreme": `${root}Vreme.json`,
+"JuzneVesti": `${root}JuzneVesti.json`,
+"B92": `${root}B92.json` ,
+}
