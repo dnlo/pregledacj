@@ -1,7 +1,5 @@
 import { Component } from "inferno";
-import Logo from "./logo";
 import "./tachyons.min.css";
-import "./trunc.css";
 import Select from "./Select";
 import Home from "./Home";
 import { BrowserRouter, Route, Switch, Link } from "inferno-router";
@@ -15,20 +13,19 @@ class App extends Component {
     let selectedFeeds = Object.keys(window.localStorage);
     return (
       <BrowserRouter>
-        <div className="App">
-          <header className="items-center flex shadow-2">
-            <Logo height="80px" />
-              <Link className="mh3 f2 b underline-hover link near-black" to="/">
+        <div className="App mb5">
+          <header className="items-center flex">
+              <Link className="white pa2 ph3 bg-black f3 b underline-hover link near-black" to="/">
                 pregledacj
               </Link>
             <Link
-              className="mr3 ph3 pv2 mt2 pointer br-pill ba link blue grow outline-0"
+              className="ml3 mr3 ph3 pv2 mt2 pointer ba link blue grow outline-0"
               to="/birkaj"
             >
               birkaj
             </Link>
             <Link
-              className="ph3 pv2 mt2 pointer br-pill ba link blue grow outline-0"
+              className="ph3 pv2 mt2 pointer ba link blue grow outline-0"
               to="/"
             >
               citkaj

@@ -6,7 +6,8 @@
     "dayjs": "^1.8.12",
     "inferno": "^7.1.11",
     "inferno-router": "^7.1.11",
-    "inferno-scripts": "7.0.4"
+    "inferno-scripts": "7.0.4",
+    "magic-grid": "^3.2.4"
   },
   "scripts": {
     "start": "inferno-scripts start",
