@@ -58,7 +58,6 @@ class Home extends Component {
 
   render() {
     let feeds = this.state.data;
-    window.scrollTo(0, window.sessionStorage.getItem("scroll"));
     return (
       <div className="App">
         <div id="feedList" className="flex w-100 flex-wrap">
