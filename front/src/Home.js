@@ -18,7 +18,15 @@ class Home extends Component {
   }
   componentDidMount() {
     let selectedLength = this.props.selectedFeeds.length;
+    console.log(selectedLength);
 
+    // Manual scroll setup
+    window.history.scrollRestoration = "manual";
+    window.addEventListener("scroll", () => {
+      window.localStorage.setItem("scroll", window.scrollY);
+    });
+
+    console.log(selectedLength);
     if (selectedLength < 1) {
       this.setState({
         emptyFeed: true
@@ -42,6 +50,9 @@ class Home extends Component {
     let feeds = this.props.feeds;
     console.log(this.props.selectedFeeds);
     this.props.selectedFeeds.map((l, i) => {
+      if (l === "scroll") {
+        return null;
+      }
       return fetch(feeds[l])
         .then(res => res.json())
         .then(result => {
@@ -58,6 +69,7 @@ class Home extends Component {
 
   render() {
     let feeds = this.state.data;
+    window.scrollTo(0, window.localStorage.getItem("scroll"));
     return (
       <div className="App">
         <div id="feedList" className="flex w-100 flex-wrap">
