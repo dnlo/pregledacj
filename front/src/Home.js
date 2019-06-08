@@ -18,15 +18,7 @@ class Home extends Component {
   }
   componentDidMount() {
     let selectedLength = this.props.selectedFeeds.length;
-    console.log(selectedLength);
 
-    // Manual scroll setup
-    window.history.scrollRestoration = "manual";
-    window.addEventListener("scroll", () => {
-      window.sessionStorage.setItem("scroll", window.scrollY);
-    });
-
-    console.log(selectedLength);
     if (selectedLength < 1) {
       this.setState({
         emptyFeed: true
@@ -50,9 +42,6 @@ class Home extends Component {
     let feeds = this.props.feeds;
     console.log(this.props.selectedFeeds);
     this.props.selectedFeeds.map((l, i) => {
-      if (l === "scroll") {
-        return null;
-      }
       return fetch(feeds[l])
         .then(res => res.json())
         .then(result => {
